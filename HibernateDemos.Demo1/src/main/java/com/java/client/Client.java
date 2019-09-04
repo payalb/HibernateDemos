@@ -1,5 +1,7 @@
 package com.java.client;
 
+import java.util.Arrays;
+
 import com.java.dao.DoctorRepository;
 import com.java.dto.Address;
 import com.java.dto.Doctor;
@@ -12,12 +14,17 @@ public class Client {
 		d.setId(1);
 		d.setName("Kanika");
 		d.setTelephoneNumber(675675465l);
-		Address address= new Address();
-		address.setCity("meerut");
-		address.setHno(101);
-		address.setPincode(8787643);
-		address.setState("UP");
-		d.setAddress(address);
+		Address address1= new Address();
+		address1.setCity("meerut");
+		address1.setHno(101);
+		address1.setPincode(8787643);
+		address1.setState("UP");
+		Address address2= new Address();
+		address2.setCity("Delhi");
+		address2.setHno(102);
+		address2.setPincode(110101);
+		address2.setState("Delhi");
+		d.setAddress(Arrays.asList(address1, address2));
 		DoctorRepository rep= new DoctorRepository();
 		rep.save(d);
 			System.out.println(rep.getDoctor(1));

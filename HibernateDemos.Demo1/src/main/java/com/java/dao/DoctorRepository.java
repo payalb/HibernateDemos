@@ -26,7 +26,8 @@ public class DoctorRepository {
 	
 	public Doctor getDoctor(int id) {
 		Session s =sf.openSession();
-		Doctor d=s.get(Doctor.class, id);//get & load
+		Doctor d=s.get(Doctor.class, id);//get & load: address is a proxy
+		
 		s.close();
 		return d;
 	}

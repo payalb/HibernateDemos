@@ -1,7 +1,10 @@
 package com.java.dto;
 
-import javax.persistence.Embedded;
+import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 
 import lombok.Data;
@@ -16,7 +19,8 @@ public class Doctor {
 	//primary key
 	int id;
 	String name;
-	@Embedded
-	Address address;
+//	@Embedded
+	@ElementCollection(fetch=FetchType.EAGER)//lazy loading
+	List<Address> address;
 	long telephoneNumber;
 }
