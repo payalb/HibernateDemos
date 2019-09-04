@@ -6,7 +6,7 @@ import com.java.dao.DoctorRepository;
 import com.java.dto.Address;
 import com.java.dto.Doctor;
 
-//Association: Address is a entity object
+//Association: Bidirectional Many to one
 public class Client {
 
 	public static void main(String[] args) {
