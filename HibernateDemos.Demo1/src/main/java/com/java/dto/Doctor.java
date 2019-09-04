@@ -1,5 +1,6 @@
 package com.java.dto;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -15,6 +16,7 @@ public class Doctor {
 	//primary key
 	int id;
 	String name;
-	String address;
+	@Embedded
+	Address address;
 	long telephoneNumber;
 }
