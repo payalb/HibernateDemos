@@ -13,6 +13,7 @@
 	<modules>
 		<module>HibernateDemos.Demo1</module>
 		<module>HibernateDemos.Demo2</module>
+		<module>HibernateDemos.Demo3</module>
 	</modules>
 
 	<dependencies>
