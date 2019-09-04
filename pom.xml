@@ -12,6 +12,7 @@
 	</properties>
 	<modules>
 		<module>HibernateDemos.Demo1</module>
+		<module>HibernateDemos.Demo2</module>
 	</modules>
 
 	<dependencies>
