@@ -8,7 +8,8 @@ public class Client {
 	public static void main(String[] args) {
 	
 		DoctorRepository rep= new DoctorRepository();
-		rep.merge();
+		rep.insert();
+		rep.get();
 		
 	}
 

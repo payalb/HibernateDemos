@@ -1,5 +1,9 @@
 package com.java.dao;
 
+import java.util.List;
+
+import javax.persistence.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -62,7 +66,30 @@ public class DoctorRepository {
 		System.out.println(s1.get(Doctor.class, 1));
 		s.close();
 		
+		
 	}
-
 	
+	public void insert() {
+		//insert data from one table to other
+		Session s = sf.openSession();
+		Transaction t= s.beginTransaction();
+		Doctor d= new Doctor();
+		d.setId(11);
+		d.setName("ritu");
+		d.setTelephoneNumber(7843648743l);
+		d.setAddress("jsdjhgds");
+		s.save(d);
+		t.commit();
+		s.close();
+	}
+//HQL java entity name, property name: sql tablenames,c olumnames
+	public void get() {
+		Session s = sf.openSession();
+		Query q=s.createQuery("from Doctor where id>10");//doctor
+		List<Doctor> list=q.getResultList();
+		for(Doctor d: list) {
+			System.out.println(d);
+		}
+		s.close();
+	}
 }
