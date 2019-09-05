@@ -9,7 +9,6 @@ public class Client {
 
 	public static void main(String[] args) {
 		Doctor d= new Doctor();
-		d.setId(1);
 		d.setName("Kanika");
 		d.setTelephoneNumber(675675465l);
 		Address address1= new Address();
