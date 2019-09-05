@@ -10,7 +10,7 @@ import com.java.dto.Doctor;
 public class Client {
 
 	public static void main(String[] args) {
-		Doctor d= new Doctor();
+/*		Doctor d= new Doctor();
 		d.setId(1);
 		d.setName("Kanika");
 		d.setTelephoneNumber(675675465l);
@@ -28,16 +28,10 @@ public class Client {
 		address2.setPincode(110101);
 		address2.setState("Delhi");
 		address2.setDoctor(d);
-		d.setAddress(Arrays.asList(address1, address2));
+		d.setAddress(Arrays.asList(address1, address2));*/
 		DoctorRepository rep= new DoctorRepository();
-		rep.save(d);
-		
-			System.out.println(rep.getDoctor(1));
-			d.setName("Rohit");
-			rep.updateDoctor(d);
-			System.out.println(rep.getDoctor(1));
-		/*	rep.removeDoctor(1);
-			System.out.println(rep.getDoctor(1));*/
+		//rep.save(d);
+		rep.getAddress(1);
 	}
 
 }

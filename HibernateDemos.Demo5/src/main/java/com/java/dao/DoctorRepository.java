@@ -70,7 +70,7 @@ public class DoctorRepository {
 	}
 	
 	public void insert() {
-		//insert data from one table to other
+		//hql : only insert data from one table to other insert into doctor_bkup select * from doctor
 		Session s = sf.openSession();
 		Transaction t= s.beginTransaction();
 		Doctor d= new Doctor();
@@ -82,14 +82,16 @@ public class DoctorRepository {
 		t.commit();
 		s.close();
 	}
-//HQL java entity name, property name: sql tablenames,c olumnames
+	//HQL java entity name, property name: sql tablenames, columnames
 	public void get() {
 		Session s = sf.openSession();
-		Query q=s.createQuery("from Doctor where id>10");//doctor
-		List<Doctor> list=q.getResultList();
+		Query q=s.createQuery("select count(*) from Doctor");//doctor
+		/*List<Doctor> list=q.getResultList();
 		for(Doctor d: list) {
 			System.out.println(d);
-		}
+		}*/
+		long l=(long) q.getSingleResult();
+		System.out.println(l);
 		s.close();
 	}
 }

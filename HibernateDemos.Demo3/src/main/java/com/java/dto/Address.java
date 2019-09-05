@@ -9,7 +9,7 @@ import lombok.ToString;
 //class Proxy etends Address{}: id
 @Data
 @Entity
-@ToString(exclude="doctor")
+@ToString
 public class Address {
 
 	@Id
@@ -17,6 +17,6 @@ public class Address {
 	int hno; //getHno
 	String city, state;
 	long pincode;
-	@ManyToOne//default eager
+	@ManyToOne
 	Doctor doctor;
 }

@@ -2,25 +2,25 @@ package com.java.dto;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
+@ToString(exclude="address")
 //corresponding to this class, i should have a table in db
 //doctor table :drop and recreate.
 public class Doctor {
 
 	@Id
-	//primary key
 	int id;
 	String name;
-	//Bidirectional mapping, mappedBy: relationship is being mantained by doctor column in Address table
-	@OneToMany(fetch=FetchType.EAGER, mappedBy= "doctor")
+	@OneToMany (mappedBy= "doctor", cascade=CascadeType.PERSIST)
 	List<Address> address;
 	long telephoneNumber;
 }
