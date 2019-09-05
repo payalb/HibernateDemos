@@ -14,6 +14,7 @@
 		<module>HibernateDemos.Demo1</module>
 		<module>HibernateDemos.Demo2</module>
 		<module>HibernateDemos.Demo3</module>
+		<module>HibernateDemos.Demo4</module>
 	</modules>
 
 	<dependencies>
