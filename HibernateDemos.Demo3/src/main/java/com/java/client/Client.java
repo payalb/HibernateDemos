@@ -29,9 +29,14 @@ public class Client {
 		address2.setState("Delhi");
 		address2.setDoctor(d);
 		d.setAddress(Arrays.asList(address1, address2));*/
+		Doctor d= new Doctor();
+		d.setId(12);
+		d.setName("Kanika");
+		d.setTelephoneNumber(675675465l);
 		DoctorRepository rep= new DoctorRepository();
-		//rep.save(d);
-		rep.getAddress(1);
+		rep.save(d);
+		//rep.getAddress(1);
+		rep.removeDoctor(12);
 	}
 
 }

@@ -1,12 +1,15 @@
 package com.java.dao;
 
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
+import com.fasterxml.classmate.GenericType;
 import com.java.dto.Address;
 import com.java.dto.Doctor;
 
@@ -48,6 +51,17 @@ public class DoctorRepository {
 	 * public List<Doctor> getDoctors(){ Session s =sf.openSession(); Doctor d=s.fin
 	 * s.close(); return d; }
 	 */
+	public void getAddresses() {
+		Session s = sf.openSession();
+	//pagination
+		Query q=s.createQuery("from address");
+		q.setFirstResult(0);
+		q.setMaxResults(20);
+		List a= q.getResultList();
+		System.out.println(a);
+		s.close();
+	}
+
 
 	public void updateDoctor(Doctor d) {
 		Session s = sf.openSession();
