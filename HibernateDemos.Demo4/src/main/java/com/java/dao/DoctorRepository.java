@@ -43,7 +43,7 @@ public class DoctorRepository {
 	public void updateDoctor(Doctor d) {
 		Session s =sf.openSession();
 		Transaction t=s.beginTransaction();
-		s.update(d);
+		s.merge(d);
 		t.commit();
 		s.close();
 	}
