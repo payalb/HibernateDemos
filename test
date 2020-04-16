@@ -36,3 +36,7 @@ What is HibernateTemplate class?
 Which design patterns are used in Hibernate framework? Proxy pattern?
 What do you mean by lazy loading in hibernate?
 List 7 ways you can improve your performance in hibernate.
+What are the various locking strategies in hibernate?
+Diff between merge and update?
+
+
