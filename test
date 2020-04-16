@@ -30,7 +30,7 @@ How to implement relationships in hibernate?
 How transaction management works in Hibernate?
 Limitations of hibernate transactions?
 What is cascading and what are different types of cascading? Explain each
-
+What is n+1 problem in hibernate?
 How to integrate Hibernate and Spring frameworks?
 What is HibernateTemplate class?
 Which design patterns are used in Hibernate framework? Proxy pattern?
