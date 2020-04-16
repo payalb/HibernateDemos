@@ -1,0 +1,38 @@
+What is an ORM framework?
+What are the important benefits of using Hibernate over jdbc. List 7 differences?
+What is hibernate configuration file?
+What is hibernate mapping file?
+Name some important annotations used for Hibernate mapping?
+What is Hibernate SessionFactory and how to configure it?
+Hibernate SessionFactory is thread safe?
+What is Hibernate Session and how to get it?
+Hibernate Session is thread safe?
+What is difference between openSession and getCurrentSession?
+What is difference between Hibernate Session get() and load() method?
+What is hibernate caching? Explain Hibernate first level cache?
+How to configure Hibernate Second Level Cache using EHCache?
+What are different states of an entity bean?
+What is use of Hibernate Session merge() call?
+What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
+What will happen if we don’t have no-args constructor in Entity bean?
+How to implement Joins in Hibernate?
+Why we should not make Entity Class final?
+What is HQL and what are it’s benefits?
+What is Query Cache in Hibernate?
+Can we execute native sql query in hibernate?
+What is the benefit of native sql query support in hibernate?
+What is Named SQL Query?
+What are the benefits of Named SQL Query?
+What is the benefit of Hibernate Criteria API?
+How to log hibernate generated sql queries in log files?
+What is Hibernate Proxy and how it helps in lazy loading?
+How to implement relationships in hibernate?
+How transaction management works in Hibernate?
+Limitations of hibernate transactions?
+What is cascading and what are different types of cascading? Explain each
+
+How to integrate Hibernate and Spring frameworks?
+What is HibernateTemplate class?
+Which design patterns are used in Hibernate framework? Proxy pattern?
+What do you mean by lazy loading in hibernate?
+List 7 ways you can improve your performance in hibernate.
